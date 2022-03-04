@@ -1,2 +1,4 @@
 install numpy using cmd as admin
 use pip install numpy
+
+install DB Browser for sqlite

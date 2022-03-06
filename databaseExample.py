@@ -19,7 +19,7 @@ conn.close()
 
 conn = sqlite3.connect('test.db')
 
-'''with conn:
+with conn:
     cur = conn.cursor() #controls sql
     cur.execute('INSERT INTO tbl_persons(col_fName, col_lName, col_email) VALUES (?,?,?)',\
                ('Sarah','Jones','sjones@gmail.com'))
@@ -28,7 +28,7 @@ conn = sqlite3.connect('test.db')
     cur.execute('INSERT INTO tbl_persons(col_fName, col_lName, col_email) VALUES (?,?,?)',\
                ('Kevin','Bacon','kbacon@gmail.com'))
     conn.commit()
-conn.close()'''
+conn.close()
 
 conn = sqlite3.connect('test.db')
 

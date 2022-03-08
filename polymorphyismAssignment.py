@@ -13,6 +13,7 @@ class Pet:
 
 class Dog(Pet):
     legs = 4
+    age = 5
     hair = 'short hair'
     ownerName = 'Gabe'
     dogBreed = 'Black Lab'
@@ -27,9 +28,10 @@ class Cat(Pet):
     hair = 'short hair'
     ownerName = 'Emily'
     catName = 'Lucky'
+    catFood = 'Wet food'
     
     def owner(self):
-        msg = '\nOwner Name: {}\nCat name: {}'.format(self.ownerName, self.catName)
+        msg = '\nOwner Name: {}\nCat name: {}, Favorite Food'.format(self.ownerName, self.catName, self.catFood)
         return msg
 
         

@@ -25,6 +25,12 @@ class ParentWindow(Frame):
         self.lblLname = Label(self.master, text = 'Last Name: ', font = ('Helvetica', 16), fg = 'black', bg = 'lightgray')
         self.lblLname.grid(row = 1, column = 0, padx=(30,0), pady=(30,0))
 
+    #label display
+        self.lblDisplay = Label(self.master, text = '', font = ('Helvetica', 16), fg = 'black', bg = 'lightgray')
+        self.lblDisplay.grid(row =3, column=1, padx=(30,0), pady=(30,0))
+
+
+    
     #Text Fields
         self.txtFname = Entry(self.master, text = self.varFname, font = ('Helvetica', 16), fg = 'black', bg = 'lightgray')
         self.txtFname.grid(row =0, column=1, padx=(30,0), pady=(30,0))    #placment
@@ -33,11 +39,19 @@ class ParentWindow(Frame):
         self.txtLname.grid(row = 1, column = 1, padx=(30,0), pady=(30,0)) #calspan = 2 will expand into two columns
 
     #Button
-        self.btnSubmit = Button(self.master, text='Submit', width = 10, height = 2)
+        self.btnSubmit = Button(self.master, text='Submit', width = 10, height = 2, command = self.submit)
         self.btnSubmit.grid(row = 2, column = 1, padx=(0,0), pady=(30, 0), sticky = NE)
+        
+        self.btnCancel = Button(self.master, text='Cancel', width = 10, height = 2, command = self.cancel)
+        self.btnCancel.grid(row = 2, column = 1, padx=(0,90), pady=(30, 0), sticky = NE)
 
+    def submit(self):
+        fn = self.varFname.get()    #get value
+        ln = self.varLname.get()
+        self.lblDisplay.config(text = 'Hello {} {}!'.format(fn, ln))    #config is to change during a running program(dynamic change)
 
-
+    def cancel(self):
+        self.master.destroy()
 
         
 

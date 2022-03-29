@@ -1,4 +1,6 @@
 install numpy using cmd as admin
 use pip install numpy
+pip3 install numpy
+pip3 install virtualenv
 
 install DB Browser for sqlite

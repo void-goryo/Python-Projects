@@ -4,3 +4,4 @@ pip3 install numpy
 pip3 install virtualenv
 
 install DB Browser for sqlite
+install pycharm community
